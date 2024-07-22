@@ -1,0 +1,163 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Hyper Hub", HidePremium = false, SaveConfig = false, IntroEnabled = false, ConfigFolder = "HyperHubv2"})
+--- Tabs
+
+local updatestab = Window:MakeTab({
+	Name = "Updates",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local plrtab = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local gamestab = Window:MakeTab({
+	Name = "Games",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--- Updates Tab
+
+updatestab:AddParagraph("Updated 07/22/2024","the script has been updated")
+updatestab:AddLabel("+ Added Horror RNG Script")
+updatestab:AddLabel("+ Added Blox Fruits Script")
+updatestab:AddLabel("+ Added Arsenal Script")
+updatestab:AddLabel("+ Added Blade Ball Script")
+updatestab:AddLabel("+ Added A dusty trip Script")
+updatestab:AddLabel("+ Added R15 to R6 Script")
+
+--- Plr Tab
+
+--- Sliders
+
+plrtab:AddLabel("Sliders")
+
+plrtab:AddSlider({
+	Name = "Walkspeed",
+	Min = 16,
+	Max = 500,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Speed",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+
+plrtab:AddSlider({
+	Name = "JumpPower",
+	Min = 50,
+	Max = 1000,
+	Default = 50,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Power",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
+--- Cool Things
+
+plrtab:AddLabel("Cool Things")
+
+plrtab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+      		 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  	end    
+})
+
+plrtab:AddButton({
+	Name = "Fly Gui v3",
+	Callback = function()
+      		 loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+  	end    
+})
+
+plrtab:AddButton({
+	Name = "R15 to R6",
+	Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/9BFcHqfK"))("Copyright ERROR_CODE ECCS Co")
+  	end    
+})
+
+--- Games Tab
+
+gamestab:AddLabel("Remember all scripts here work with solara")
+
+gamestab:AddButton({
+	Name = "Sheep Tycoon",
+	Callback = function()
+local function getWool()
+local args = {
+[1] = 17,
+[2] = Vector3.new(-162.36593627929688, 3.311232566833496, 938.9034423828125)
+}
+game:GetService("ReplicatedStorage").Signals.RemoteEvents.GetWoolRemote:FireServer(unpack(args))
+end
+
+while true do
+getWool()
+wait()
+end
+  	end    
+})
+
+gamestab:AddButton({
+	Name = "RNG Fights (Rinns Hub)",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiCen/MainMenu/main/Code"))()
+  	end    
+})
+
+gamestab:AddButton({
+	Name = "Build a boat for treasure (Ski Hub)",
+	Callback = function()
+if game.PlaceId == 537413528 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Yousuck780/Build-A-Boat-For-Treasure/main/Build%20A%20Boat%20For%20Treasure", true))()
+end
+  	end    
+})
+
+gamestab:AddButton({
+	Name = "Horror RNG ( Dont spam or lags )",
+	Callback = function()
+for i = 1, 1000 do
+    game:GetService("ReplicatedStorage").Events.InventoryEvent:FireServer("Equip","Super Luck Potion","Usable")
+end
+  	end
+})
+
+gamestab:AddButton({
+	Name = "Blox Fruits (Zen Hub)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaizenofficiall/ZenHub/main/Loader", true))()
+  	end    
+})
+
+gamestab:AddButton({
+	Name = "Arsenal (QP Hub)",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/QP-Community/Roblox-Exploit/main/Loader2.lua"))()
+  	end    
+})
+
+gamestab:AddButton({
+	Name = "Blade Ball (QP Hub)",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/QP-Community/Roblox-Exploit/main/Loader2.lua"))()
+  	end    
+})
+
+gamestab:AddButton({
+	Name = "A dusty trip (Connect Hub)",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
+  	end    
+})
